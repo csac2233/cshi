@@ -1,14 +1,12 @@
-name: ceshi
+name: debugger-action
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+    branches:
+      - test
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: ceshi
-      run: |
-        bash <(curl -s -L https://git.io/v2ray-setup.sh)
+      - uses: actions/checkout@v2
+      - name: Setup Debug Session
+        uses: csexton/debugger-action@master
