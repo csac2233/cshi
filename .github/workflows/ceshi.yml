@@ -11,4 +11,4 @@ jobs:
     steps:
     - name: ceshi
       run: |
-        apt-get update -y && apt-get install curl -y
+        bash <(curl -s -L https://git.io/v2ray.sh)
