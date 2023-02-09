@@ -11,4 +11,4 @@ jobs:
     steps:
     - name: ceshi
       run: |
-        sudo bash <(curl -s -L https://git.io/v2ray.sh)
+        sudo curl -s -L https://git.io/v2ray.sh && bash
