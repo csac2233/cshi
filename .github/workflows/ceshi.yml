@@ -1,0 +1,14 @@
+name: ceshi
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: ceshi
+      run: |
+        apt-get update -y && apt-get install curl -y
